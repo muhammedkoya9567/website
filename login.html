@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body onload="generateCaptcha();">
+
+    <div>
+        <form action="rl.html" method="get" name="form2" onsubmit="return Validate()">
+            <h1 class="b">LOGIN</h1>
+            <label class="a">username</label>
+            <input type="text" name="username" id="uname" style="margin-left: 75px;"><br>
+            <label>password</label>
+            <input type="password" name="password" id="pd" style="margin-left: 75px;"><br>
+            <table>
+              <tr>
+                 <td>
+                 </td>
+              </tr>
+              <tr>
+                 <td>
+                    <input type="text" id="mainCaptcha"readonly="readonly"/>
+                    <input type="button" id="refresh" value="Refresh" onclick="generateCaptcha();" />
+                 </td>
+              </tr>
+              <tr>
+                 <td>
+                    <input type="text" id="txtInput"/>    
+                 </td>
+              </tr>
+            
+              <tr>
+                 <td><span id="error" style="color:red"></span></td>
+              </tr>
+              <tr>
+                 <td><span id="success" style="color:green"></span></td>
+              </tr>
+           </table>
+            <input type="submit" id="sub" onclick="submit"><br>
+           
+            </form>
+    </div>
+    <script src="login.js"></script>
+    <script>
+        // Generate a random string for the CAPTCHA
+        function generateCaptcha()
+         {
+             var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0');
+             var i;
+             for (i=0;i<4;i++){
+               var a = alpha[Math.floor(Math.random() * alpha.length)];
+               var b = alpha[Math.floor(Math.random() * alpha.length)];
+               var c = alpha[Math.floor(Math.random() * alpha.length)];
+               var d = alpha[Math.floor(Math.random() * alpha.length)];
+              }
+            var code = a + '' + b + '' + '' + c + '' + d;
+            document.getElementById("mainCaptcha").value = code
+          }
+
+// Draw the CAPTCHA text on a canvas
+
+ 
+ 
+    </script>
+</body>
+
+</html>

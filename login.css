@@ -1,0 +1,24 @@
+div{
+    padding: 10px;
+   background-color: aqua;
+   width: fit-content;
+   height: fit-content;
+   border: 1px solid black;
+   border-radius: 10px;
+   font-size: large;
+   margin-left: 435px;
+   margin-top: 200px;
+   
+
+}
+
+label{
+    width: 150px;
+}
+.b{
+    margin-left: 80px;
+}
+body{
+    display: inline-block;
+    justify-content: center
+}

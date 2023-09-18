@@ -1,0 +1,30 @@
+div{
+  background-color:aqua;
+  width:fit-content;
+  height:fit-content;
+  margin-left: 31%;
+  margin-top: 5%;
+  padding: 20px;
+  font-size: large;
+  border-radius: 25px;
+  
+
+}
+label{
+    width: 150px;
+    display: inline-block;
+
+}
+
+.reg{
+    margin-left: 70px;
+}
+input{
+    border-radius: 4px; 
+
+}
+.a{
+    background-color: blue;
+    margin-left: 140px;
+    margin-top: 15px;
+}

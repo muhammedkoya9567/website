@@ -1,0 +1,35 @@
+body{
+    background-image: url("image1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.a{
+    color:rgb(245, 10, 245);
+    font-size: xx-large;
+    margin-top: -70px;
+    padding: 25px;
+    text-align: center;
+}
+nav{
+    align-items: center;
+    width: 1515px;
+    height: 100px;
+}
+nav a{
+    color: chartreuse;
+    font-size: x-large;
+    text-decoration: none;
+}
+li{
+    display: inline;
+    margin: 3px 30px;
+    margin-left:150px;
+}
+.demo{
+    padding: -90px;
+    color:rgb(245, 10, 245);
+    font-size: xx-large;
+    margin-top: -130px;
+    padding: -5px;
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>if you on thre "Hide" button,i will disappear</p>
+    <button id="a">hide</button>
+    <button id="b">show</button>
+    <button id="c">toggle</button> 
+    <script src="jqurey.js"></script>
+    <script>
+        $(document).ready(function(){
+         $("#a").click(function(){
+             $("p").hide();
+               $("#b").click(function(){
+                  $("p").show();
+                 
+                  
+                })
+            })
+        })
+        $(document).ready(function(){
+            $("#c").click(function(){
+                    $("p").toggle();
+        })
+    })
+    </script>
+</body>
+</html>

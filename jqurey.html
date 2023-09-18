@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <img src="../BUKHATI.jpg" id="mi" style="width: 500px;position: fixed;top: 0;left: 0;">
+    
+
+    <script src="jqurey.js"></script>
+    
+
+    <script>
+        $(document).ready(function () {
+            var left_value = 0;
+            var top_value = 0;
+            $(document).keydown(function (e) {
+                var action = e.keyCode;
+                console.log(action)
+
+
+                if (action == 37) {
+                    left_value = left_value - 10;
+                    $("#mi").css("left", left_value);
+                }
+
+                if (action == 39) {
+                    left_value = left_value + 10;
+                    $("#mi").css("left", left_value);
+                }
+
+                if (action == 38) {
+                    top_value = top_value - 10;
+                    $("#mi").css("top", top_value);
+                }
+
+                if (action == 40) {
+                    top_value = top_value + 10;
+                    $("#mi").css("top", top_value);
+                }
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>

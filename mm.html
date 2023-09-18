@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body onload="genratecaptcha()">
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" id="maincaptcha" readonly="readonly">
+                        <input type="button" id="refresh" value="refresh" onclick="checkvalidcaptcha();">
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="text" id="txt input">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="button" value="check" onclick="checkvalidcaptcha();">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="error" style="color:red"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="sucess" style="color:green"></span>
+                    </td>
+                </tr>
+                </center>
+                <script>
+                    function genratecaptcha()
+                    {
+                        varcap=new Array("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","1","2","3","4","5","6","7","8","9","0")
+                        var i;
+                        for(i=0;i<4;i++);
+                        {
+                            var a=[Map.floor(math.random()*cap.length)];
+                            var b=[Map.floor(math.random()*cap.length)];
+                            var c=[Map.floor(math.random()*cap.length)];
+                            var d=[Map.floor(math.random()*cap.length)];
+                            
+                            var code=a+b+c+d;
+                            document.getElementById("maincaptcha").value="code"
+
+                            function checkvalidcaptcha(){
+                                var sring1=removespaces(document.getElementById("maincaptcha").value);
+                                var sring2=removespaces(document.getElementById("txtinput").value);
+
+
+                            if(string==sring2){
+                                document.getElementById("success").innerHTML="form is validated successfully";
+                                alert("succes");
+                                return true;
+                                                        }
+                            else{
+                                document.getElementById("error").innerHTML="please enter valid captcha";
+                                return false
+                            }               
+                            function removespaces(string){
+                                return string.readAll("","");
+                            }             
+                                                                                }
+
+
+                            
+                        }
+
+
+
+                    }
+                </script>
+
+            </table>
+        </center>
+    </body>
+</body>
+</html>
